@@ -20741,7 +20741,7 @@ z
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">axisFont</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span> <span class="s1">&#39;serif&#39;</span><span class="p">,</span>      <span class="c1"># Define font family dictionary for axes labels and tick marks</span>
@@ -20799,13 +20799,19 @@ z
 
 <span class="c1"># Adding a text box</span>
 <span class="c1"># Create the text string (&#39;+&#39; concatenates strings, &#39;\n&#39; inserts a newline)</span>
-<span class="n">textstr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;${ANOVA:\ \rho = 0.0001}$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;Significant Difference Found&#39;</span>
+<span class="n">textStr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;${ANOVA:\ \rho = 0.0001}$&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;Significant Difference Found&#39;</span>
 
-<span class="c1"># Set properties for bounding box (&#39;round&#39; = round corner, &#39;facecolor&#39; = background color, etc.)</span>
-<span class="n">props</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># Properties for box (&#39;boxstyle&#39; = corner type, &#39;facecolor&#39; = background color, &#39;alpha&#39; = transparency of background)</span>
+<span class="n">props</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;boxstyle&#39;</span><span class="p">:</span><span class="s1">&#39;square&#39;</span><span class="p">,</span> <span class="s1">&#39;facecolor&#39;</span><span class="p">:</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">}</span>
 
-<span class="c1"># place a text box in upper left using axes coordinates for location</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="n">textstr</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">props</span><span class="p">)</span>
+<span class="c1"># Position the text box using axes coordinates</span>
+<span class="c1"># plt.text(x, y, textStr, fontsize, verticalalignment, horizontalalignment, bbox)</span>
+    <span class="c1"># x, y are axes coordinates for positioning the box </span>
+    <span class="c1"># textStr is the variable that references the string of text you want to place </span>
+    <span class="c1"># &#39;verticalalignment = top&#39; -- align top of box with specified y-coord (could also use &#39;center&#39; or &#39;bottom&#39;)</span>
+    <span class="c1"># &#39;horizontalalignment = center&#39; - horiztontally aligns text in box (left, center, right)</span>
+    <span class="c1"># &#39;bbox&#39; = properties for textbox</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="n">textStr</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">props</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -20834,7 +20840,7 @@ z
   <rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2021-01-10T15:46:57.076623</dc:date>
+    <dc:date>2021-01-10T16:19:28.247020</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -20866,7 +20872,7 @@ z
 " style="fill:#f5f5f5;"/>
    </g>
    <g id="patch_3">
-    <path clip-path="url(#p5f75ab6356)" d="M 68.073011 363.24 
+    <path clip-path="url(#pe5847c9068)" d="M 68.073011 363.24 
 L 213.008076 363.24 
 L 213.008076 184.456 
 L 68.073011 184.456 
@@ -20874,7 +20880,7 @@ z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_4">
-    <path clip-path="url(#p5f75ab6356)" d="M 249.241843 363.24 
+    <path clip-path="url(#pe5847c9068)" d="M 249.241843 363.24 
 L 394.176907 363.24 
 L 394.176907 147.763 
 L 249.241843 147.763 
@@ -20882,7 +20888,7 @@ z
 " style="fill:#1f77b4;"/>
    </g>
    <g id="patch_5">
-    <path clip-path="url(#p5f75ab6356)" d="M 430.410674 363.24 
+    <path clip-path="url(#pe5847c9068)" d="M 430.410674 363.24 
 L 575.345739 363.24 
 L 575.345739 137.646 
 L 430.410674 137.646 
@@ -20895,10 +20901,10 @@ z
       <defs>
        <path d="M 0 0 
 L 0 3.5 
-" id="m9f674e3cb2" style="stroke:#000000;stroke-width:0.8;"/>
+" id="m229b638481" style="stroke:#000000;stroke-width:0.8;"/>
       </defs>
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="140.540544" xlink:href="#m9f674e3cb2" y="363.24"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="140.540544" xlink:href="#m229b638481" y="363.24"/>
       </g>
      </g>
      <g id="text_1">
@@ -20941,7 +20947,7 @@ z
     <g id="xtick_2">
      <g id="line2d_2">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="321.709375" xlink:href="#m9f674e3cb2" y="363.24"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="321.709375" xlink:href="#m229b638481" y="363.24"/>
       </g>
      </g>
      <g id="text_2">
@@ -21070,7 +21076,7 @@ z
     <g id="xtick_3">
      <g id="line2d_3">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="502.878206" xlink:href="#m9f674e3cb2" y="363.24"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="502.878206" xlink:href="#m229b638481" y="363.24"/>
       </g>
      </g>
      <g id="text_3">
@@ -21420,10 +21426,10 @@ z
       <defs>
        <path d="M 0 0 
 L -3.5 0 
-" id="me2b98f4665" style="stroke:#000000;stroke-width:0.8;"/>
+" id="m143f1ffb56" style="stroke:#000000;stroke-width:0.8;"/>
       </defs>
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="363.24"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="363.24"/>
       </g>
      </g>
      <g id="text_5">
@@ -21436,7 +21442,7 @@ L -3.5 0
     <g id="ytick_2">
      <g id="line2d_5">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="341.496"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="341.496"/>
       </g>
      </g>
      <g id="text_6">
@@ -21475,7 +21481,7 @@ z
     <g id="ytick_3">
      <g id="line2d_6">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="319.752"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="319.752"/>
       </g>
      </g>
      <g id="text_7">
@@ -21507,7 +21513,7 @@ z
     <g id="ytick_4">
      <g id="line2d_7">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="298.008"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="298.008"/>
       </g>
      </g>
      <g id="text_8">
@@ -21520,7 +21526,7 @@ z
     <g id="ytick_5">
      <g id="line2d_8">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="276.264"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="276.264"/>
       </g>
      </g>
      <g id="text_9">
@@ -21533,7 +21539,7 @@ z
     <g id="ytick_6">
      <g id="line2d_9">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="254.52"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="254.52"/>
       </g>
      </g>
      <g id="text_10">
@@ -21547,7 +21553,7 @@ z
     <g id="ytick_7">
      <g id="line2d_10">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="232.776"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="232.776"/>
       </g>
      </g>
      <g id="text_11">
@@ -21561,7 +21567,7 @@ z
     <g id="ytick_8">
      <g id="line2d_11">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="211.032"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="211.032"/>
       </g>
      </g>
      <g id="text_12">
@@ -21575,7 +21581,7 @@ z
     <g id="ytick_9">
      <g id="line2d_12">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="189.288"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="189.288"/>
       </g>
      </g>
      <g id="text_13">
@@ -21589,7 +21595,7 @@ z
     <g id="ytick_10">
      <g id="line2d_13">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="167.544"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="167.544"/>
       </g>
      </g>
      <g id="text_14">
@@ -21603,7 +21609,7 @@ z
     <g id="ytick_11">
      <g id="line2d_14">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="145.8"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="145.8"/>
       </g>
      </g>
      <g id="text_15">
@@ -21617,7 +21623,7 @@ z
     <g id="ytick_12">
      <g id="line2d_15">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="124.056"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="124.056"/>
       </g>
      </g>
      <g id="text_16">
@@ -21631,7 +21637,7 @@ z
     <g id="ytick_13">
      <g id="line2d_16">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="102.312"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="102.312"/>
       </g>
      </g>
      <g id="text_17">
@@ -21645,7 +21651,7 @@ z
     <g id="ytick_14">
      <g id="line2d_17">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="80.568"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="80.568"/>
       </g>
      </g>
      <g id="text_18">
@@ -21659,7 +21665,7 @@ z
     <g id="ytick_15">
      <g id="line2d_18">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="58.824"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="58.824"/>
       </g>
      </g>
      <g id="text_19">
@@ -21673,7 +21679,7 @@ z
     <g id="ytick_16">
      <g id="line2d_19">
       <g>
-       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#me2b98f4665" y="37.08"/>
+       <use style="stroke:#000000;stroke-width:0.8;" x="42.709375" xlink:href="#m143f1ffb56" y="37.08"/>
       </g>
      </g>
      <g id="text_20">
@@ -22000,13 +22006,13 @@ z
     </g>
    </g>
    <g id="LineCollection_1">
-    <path clip-path="url(#p5f75ab6356)" d="M 140.540544 244.53763 
+    <path clip-path="url(#pe5847c9068)" d="M 140.540544 244.53763 
 L 140.540544 124.37437 
 " style="fill:none;stroke:#000000;stroke-width:1.5;"/>
-    <path clip-path="url(#p5f75ab6356)" d="M 321.709375 200.067422 
+    <path clip-path="url(#pe5847c9068)" d="M 321.709375 200.067422 
 L 321.709375 95.458578 
 " style="fill:none;stroke:#000000;stroke-width:1.5;"/>
-    <path clip-path="url(#p5f75ab6356)" d="M 502.878206 189.794376 
+    <path clip-path="url(#pe5847c9068)" d="M 502.878206 189.794376 
 L 502.878206 85.497624 
 " style="fill:none;stroke:#000000;stroke-width:1.5;"/>
    </g>
@@ -22014,23 +22020,23 @@ L 502.878206 85.497624
     <defs>
      <path d="M 5 0 
 L -5 -0 
-" id="m13e31505e9" style="stroke:#000000;"/>
+" id="m202e44e1a7" style="stroke:#000000;"/>
     </defs>
-    <g clip-path="url(#p5f75ab6356)">
-     <use style="stroke:#000000;" x="140.540544" xlink:href="#m13e31505e9" y="244.53763"/>
-     <use style="stroke:#000000;" x="321.709375" xlink:href="#m13e31505e9" y="200.067422"/>
-     <use style="stroke:#000000;" x="502.878206" xlink:href="#m13e31505e9" y="189.794376"/>
+    <g clip-path="url(#pe5847c9068)">
+     <use style="stroke:#000000;" x="140.540544" xlink:href="#m202e44e1a7" y="244.53763"/>
+     <use style="stroke:#000000;" x="321.709375" xlink:href="#m202e44e1a7" y="200.067422"/>
+     <use style="stroke:#000000;" x="502.878206" xlink:href="#m202e44e1a7" y="189.794376"/>
     </g>
    </g>
    <g id="line2d_21">
-    <g clip-path="url(#p5f75ab6356)">
-     <use style="stroke:#000000;" x="140.540544" xlink:href="#m13e31505e9" y="124.37437"/>
-     <use style="stroke:#000000;" x="321.709375" xlink:href="#m13e31505e9" y="95.458578"/>
-     <use style="stroke:#000000;" x="502.878206" xlink:href="#m13e31505e9" y="85.497624"/>
+    <g clip-path="url(#pe5847c9068)">
+     <use style="stroke:#000000;" x="140.540544" xlink:href="#m202e44e1a7" y="124.37437"/>
+     <use style="stroke:#000000;" x="321.709375" xlink:href="#m202e44e1a7" y="95.458578"/>
+     <use style="stroke:#000000;" x="502.878206" xlink:href="#m202e44e1a7" y="85.497624"/>
     </g>
    </g>
    <g id="line2d_22">
-    <path clip-path="url(#p5f75ab6356)" d="M 140.540544 184.456 
+    <path clip-path="url(#pe5847c9068)" d="M 140.540544 184.456 
 L 321.709375 147.763 
 L 502.878206 137.646 
 " style="fill:none;stroke:#ff751a;stroke-linecap:square;stroke-width:3;"/>
@@ -22057,15 +22063,10 @@ L 600.709375 37.08
    </g>
    <g id="text_22">
     <g id="patch_10">
-     <path d="M 62.792028 85.087531 
-L 218.289059 85.087531 
-Q 221.589059 85.087531 221.589059 81.787531 
-L 221.589059 58.801656 
-Q 221.589059 55.501656 218.289059 55.501656 
-L 62.792028 55.501656 
-Q 59.492028 55.501656 59.492028 58.801656 
-L 59.492028 81.787531 
-Q 59.492028 85.087531 62.792028 85.087531 
+     <path d="M 59.492028 85.087531 
+L 221.589059 85.087531 
+L 221.589059 55.501656 
+L 59.492028 55.501656 
 z
 " style="fill:#f5deb3;opacity:0.5;stroke:#000000;stroke-linejoin:miter;"/>
     </g>
@@ -22965,7 +22966,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p5f75ab6356">
+  <clipPath id="pe5847c9068">
    <rect height="326.16" width="558" x="42.709375" y="37.08"/>
   </clipPath>
  </defs>
@@ -22975,19 +22976,6 @@ z
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
